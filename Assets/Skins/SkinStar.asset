@@ -1,0 +1,29 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d80d2b12d3f0e8e4f8e0cfec55b7dbb2, type: 3}
+  m_Name: SkinStar
+  m_EditorClassIdentifier: 
+  environment:
+  - {fileID: 3060017831494122771, guid: a5aceeafd90c02943a50ee7d61593ab9, type: 3}
+  - {fileID: 5788739898352994838, guid: 4ea9dfe74bd01134a9d346547a3b5deb, type: 3}
+  - {fileID: 1581681904828899661, guid: 184239435f7472847be07a5811d73f13, type: 3}
+  - {fileID: 1349928803635978701, guid: a6c06464113276a409a0aa1fb71fe3cb, type: 3}
+  shapeId: 6
+  hopheyMesh: {fileID: -5801228030656462994, guid: 099662484b132c04a8f6de83b6b24e5e,
+    type: 3}
+  hopheyBodyMat: {fileID: 2100000, guid: af143120e4d872641b39f3feafd1702f, type: 2}
+  hopheyCapMat: {fileID: 2100000, guid: dc5f9666f5e80544a9ccf1a9ad2628f0, type: 2}
+  particleMat: {fileID: 2100000, guid: 99fa79cd92e795f48bc8b5a223fa27c2, type: 2}
+  cutfx: {fileID: 8300000, guid: ce0ccc4954fe20d4bb791f4c96cf9635, type: 3}
+  icon: {fileID: 21300000, guid: 12286bc5014a1594492e09d105490296, type: 3}
+  iconBg: {fileID: 21300000, guid: bea8ab3636b83dc4c82959e85f2e2f70, type: 3}
+  feverGlowColor: {r: 0.7647059, g: 0.7058824, b: 0.10980392, a: 0.1882353}

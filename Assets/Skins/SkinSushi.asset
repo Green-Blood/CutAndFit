@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d80d2b12d3f0e8e4f8e0cfec55b7dbb2, type: 3}
+  m_Name: SkinSushi
+  m_EditorClassIdentifier: 
+  environment:
+  - {fileID: 7020876165916420113, guid: 95d883977f3f557459f17f2c9aaed028, type: 3}
+  - {fileID: 7419559440112036016, guid: 03d4a827a6883d7458ad22dc77c2544a, type: 3}
+  - {fileID: 195008739241485485, guid: 482ea8a7d844e5a4b8f95cefc30a8c45, type: 3}
+  shapeId: 0
+  hopheyMesh: {fileID: 4300000, guid: fd63be17f35535b4d99b598a3d12cbe2, type: 3}
+  hopheyBodyMat: {fileID: 2100000, guid: bb74bdf34afc38849a6e296b2e33f751, type: 2}
+  hopheyCapMat: {fileID: 2100000, guid: 71ebee42fca9c39479ca3db27aff85a2, type: 2}
+  particleMat: {fileID: 2100000, guid: 816a0d61fa797ed4c81398cae832cbb1, type: 2}
+  cutfx: {fileID: 8300000, guid: bbc98623de284ce4b992ad6f0a935bef, type: 3}
+  icon: {fileID: 21300000, guid: db5fd46f892b49242b41c7d8f4003174, type: 3}
+  iconBg: {fileID: 21300000, guid: 3c9adef81bc73a443a040733e3cfd42a, type: 3}
+  feverGlowColor: {r: 1, g: 0.08627451, b: 0, a: 0.18039216}

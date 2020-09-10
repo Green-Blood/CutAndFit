@@ -1,0 +1,38 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 29e2c99b8ac9a1b459223edbd83be15b, type: 3}
+  m_Name: ThemeSushi
+  m_EditorClassIdentifier: 
+  levelSelector: LevelsSushi
+  environment:
+  - {fileID: 7020876165916420113, guid: 95d883977f3f557459f17f2c9aaed028, type: 3}
+  - {fileID: 7419559440112036016, guid: 03d4a827a6883d7458ad22dc77c2544a, type: 3}
+  - {fileID: 195008739241485485, guid: 482ea8a7d844e5a4b8f95cefc30a8c45, type: 3}
+  groundColor: {r: 0.6901961, g: 0.4784314, b: 0.5882353, a: 1}
+  gradientColor: {r: 0.31764707, g: 0.37647063, b: 0.3647059, a: 1}
+  darkGradientColor: {r: 0.2627451, g: 0.011764707, b: 0.14901961, a: 1}
+  groundColor1: {r: 0.5764706, g: 0.4784314, b: 0.6901961, a: 1}
+  gradientColor1: {r: 0.34509805, g: 0.37647063, b: 0.31764707, a: 1}
+  darkGradientColor1: {r: 0.011764707, g: 0.2627451, b: 0.25490198, a: 1}
+  groundColor2: {r: 0.4784314, g: 0.5921569, b: 0.6901961, a: 1}
+  gradientColor2: {r: 0.31764707, g: 0.37647063, b: 0.3647059, a: 1}
+  darkGradientColor2: {r: 0.011764707, g: 0.13333334, b: 0.2627451, a: 1}
+  groundFeverColor: {r: 0.27450982, g: 0.18823531, b: 0.23137257, a: 1}
+  gradientFeverColor: {r: 0.10980393, g: 0.2627451, b: 0.23137257, a: 1}
+  darkGradientFeverColor: {r: 0, g: 0, b: 0, a: 1}
+  feverFrameColor: {r: 1, g: 0.6117647, b: 0.41960788, a: 0.67058825}
+  feverGlowColor: {r: 0.62352943, g: 0.29411766, b: 0.20000002, a: 0.23137255}
+  accentColor: {r: 1, g: 1, b: 1, a: 1}
+  slideColor: {r: 1, g: 0.3647059, b: 0.043137256, a: 1}
+  levelTextColor: {r: 0.20784315, g: 0.20784315, b: 0.20784315, a: 1}
+  feverSlide: {r: 0.8745099, g: 0, b: 0, a: 1}
+  equipTextColor: {r: 1, g: 1, b: 1, a: 1}

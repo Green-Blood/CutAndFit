@@ -1,0 +1,28 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d80d2b12d3f0e8e4f8e0cfec55b7dbb2, type: 3}
+  m_Name: SkinPixelColor
+  m_EditorClassIdentifier: 
+  environment:
+  - {fileID: 3060017831494122771, guid: a5aceeafd90c02943a50ee7d61593ab9, type: 3}
+  - {fileID: 6874417552689162341, guid: 87c96f493d24468489382b4140258329, type: 3}
+  - {fileID: 1377938433269545640, guid: 3517977c7eeb8694398c4b5f50a7ad50, type: 3}
+  shapeId: 4
+  hopheyMesh: {fileID: -7102502947947166527, guid: 63aca09893e32db408907862870f4959,
+    type: 3}
+  hopheyBodyMat: {fileID: 2100000, guid: 50dc190e788a4f54b81333d45e635e31, type: 2}
+  hopheyCapMat: {fileID: 2100000, guid: 8461c658c8189ae41a94e86765cb7206, type: 2}
+  particleMat: {fileID: 2100000, guid: 993483cf08417d34fa63cb90af073815, type: 2}
+  cutfx: {fileID: 8300000, guid: ce0ccc4954fe20d4bb791f4c96cf9635, type: 3}
+  icon: {fileID: 21300000, guid: bd2556802ed3e854d8db29fe2cdb0de6, type: 3}
+  iconBg: {fileID: 21300000, guid: 439baa94088e49f438d710e136af5230, type: 3}
+  feverGlowColor: {r: 0.62352943, g: 0.29411766, b: 0.2, a: 0.1882353}

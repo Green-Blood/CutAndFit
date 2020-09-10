@@ -1,0 +1,40 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4fc8d34ea016e794ba9a8c50860bcc4a, type: 3}
+  m_Name: Cake
+  m_EditorClassIdentifier: 
+  hopheyMesh: {fileID: 4300000, guid: fd63be17f35535b4d99b598a3d12cbe2, type: 3}
+  hopheyMat:
+  - {fileID: 2100000, guid: 31c474b9df78a8b4d86586dfb70d5675, type: 2}
+  - {fileID: 2100000, guid: 69e88ac4f130dcb458c8f1c001f86fc0, type: 2}
+  handleMat: {fileID: 2100000, guid: c57df35dd5cc61e41818aa2f5d83b23e, type: 2}
+  particleMat: {fileID: 2100000, guid: 8a2c7078c4bc35c47972f09813579ab6, type: 2}
+  cutfx: {fileID: 8300000, guid: e741c21e3d019db4583b5d04a5ef75c4, type: 3}
+  icon: {fileID: 21300000, guid: fafe94a8d78d7c04d9c3da9acb50604d, type: 3}
+  groundColor: {r: 0.91372555, g: 0.7372549, b: 0.5411765, a: 1}
+  gradientColor: {r: 1, g: 0.7960785, b: 0.78823537, a: 1}
+  darkGradientColor: {r: 0.5019608, g: 0.30980393, b: 0.18039216, a: 1}
+  groundColor1: {r: 0.91372555, g: 0.5411765, b: 0.54901963, a: 1}
+  gradientColor1: {r: 1, g: 0.78823537, b: 0.93725497, a: 1}
+  darkGradientColor1: {r: 0.5019608, g: 0.42352945, b: 0.18039216, a: 1}
+  groundColor2: {r: 0.8705883, g: 0.91372555, b: 0.5411765, a: 1}
+  gradientColor2: {r: 0.9294118, g: 1, b: 0.78823537, a: 1}
+  darkGradientColor2: {r: 0.49411768, g: 0.5019608, b: 0.18039216, a: 1}
+  groundFeverColor: {r: 0.4156863, g: 0.32156864, b: 0.21568629, a: 1}
+  gradientFeverColor: {r: 0.1137255, g: 0.04705883, b: 0.04705883, a: 1}
+  darkGradientFeverColor: {r: 0, g: 0, b: 0, a: 1}
+  feverFrameColor: {r: 1, g: 0.8980393, b: 0.41960788, a: 0.627451}
+  feverGlowColor: {r: 0.48235297, g: 0.18039216, b: 0, a: 0.1882353}
+  accentColor: {r: 1, g: 1, b: 1, a: 1}
+  slideColor: {r: 0.8313726, g: 0.5411765, b: 0.4039216, a: 1}
+  levelTextColor: {r: 0.35686275, g: 0.35686275, b: 0.35686275, a: 1}
+  feverSlide: {r: 0, g: 0, b: 0, a: 0}

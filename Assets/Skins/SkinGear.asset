@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d80d2b12d3f0e8e4f8e0cfec55b7dbb2, type: 3}
+  m_Name: SkinGear
+  m_EditorClassIdentifier: 
+  environment:
+  - {fileID: 6083207051728668322, guid: f9367882536a16f458759da088558400, type: 3}
+  - {fileID: 8819040964426988798, guid: 00eb29646a04e6845b069c1680031ee2, type: 3}
+  shapeId: 5
+  hopheyMesh: {fileID: -2045750654109849388, guid: db6bf7724bd3d2f499969a78d482475e,
+    type: 3}
+  hopheyBodyMat: {fileID: 2100000, guid: 5b9190f861833044f92cb584928fd23a, type: 2}
+  hopheyCapMat: {fileID: 2100000, guid: b862361f4eee56b479bee6e47b6a3219, type: 2}
+  particleMat: {fileID: 2100000, guid: 99fa79cd92e795f48bc8b5a223fa27c2, type: 2}
+  cutfx: {fileID: 8300000, guid: ce0ccc4954fe20d4bb791f4c96cf9635, type: 3}
+  icon: {fileID: 21300000, guid: 5cbc8c87d3589ab4782fb5425d44a11e, type: 3}
+  iconBg: {fileID: 21300000, guid: 447cecc13ddb3224daa79938242176ee, type: 3}
+  feverGlowColor: {r: 0.7647059, g: 0.7058824, b: 0.10980392, a: 0.1882353}

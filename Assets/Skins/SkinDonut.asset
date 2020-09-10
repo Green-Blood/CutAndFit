@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d80d2b12d3f0e8e4f8e0cfec55b7dbb2, type: 3}
+  m_Name: SkinDonut
+  m_EditorClassIdentifier: 
+  environment:
+  - {fileID: 5773940622996168737, guid: 6088115f6ca1ac04888927960c84e9e8, type: 3}
+  - {fileID: 7198566075609353718, guid: 994dfe3e552ba754f832a6ba8008bc8d, type: 3}
+  - {fileID: 8663459479462554479, guid: 444dcb58b3482cb4cb5ebe6c400f9ae1, type: 3}
+  shapeId: 0
+  hopheyMesh: {fileID: 4300000, guid: fd63be17f35535b4d99b598a3d12cbe2, type: 3}
+  hopheyBodyMat: {fileID: 2100000, guid: 85502622628d37548af2ecbd73adcf0c, type: 2}
+  hopheyCapMat: {fileID: 2100000, guid: 03dcb595216fdef419f30a9e4f2773f2, type: 2}
+  particleMat: {fileID: 2100000, guid: 953bd2afc85682f44800940f560a9d3f, type: 2}
+  cutfx: {fileID: 8300000, guid: e741c21e3d019db4583b5d04a5ef75c4, type: 3}
+  icon: {fileID: 21300000, guid: f3b7dded6a985a84b83409f49d609dbb, type: 3}
+  iconBg: {fileID: 21300000, guid: 3c9adef81bc73a443a040733e3cfd42a, type: 3}
+  feverGlowColor: {r: 0.6156863, g: 0.40392157, b: 0.011764706, a: 0.1882353}

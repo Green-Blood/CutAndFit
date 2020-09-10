@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8d7cd8d93e30b7e459dddd60e74e5572, type: 3}
+  m_Name: cutter1
+  m_EditorClassIdentifier: 
+  cutters:
+  - {fileID: 7777600175970421926, guid: 115e8996bd198c24590d2d7cc6f1ad36, type: 3}
+  - {fileID: 7777600175970421926, guid: 0aec84b37ccc8a345aa201c998260ddc, type: 3}
+  - {fileID: 7777600175970421926, guid: 7cb77b7fd55cd2f479a7ebc6e2b8cf74, type: 3}
+  - {fileID: 7777600175970421926, guid: 09f6bbebb960625478b68c7a119ffe46, type: 3}
+  - {fileID: 7777600175970421926, guid: 9446506b5925667449c0672f67743876, type: 3}
+  - {fileID: 7777600175970421926, guid: e3e424d6908550f4fb3ab22160128807, type: 3}
+  - {fileID: 7777600175970421926, guid: f5dd8718ece049e4688875cd0ca1feaf, type: 3}
+  - {fileID: 7777600175970421926, guid: fe65879efbc4b3d44bbb182fbe6792f6, type: 3}
+  - {fileID: 7777600175970421926, guid: a5622677c3936f74295bc5a29f33d80f, type: 3}
+  icon: {fileID: 21300000, guid: fa27e996fa6ec8548b40aa2b9a4e9d67, type: 3}
+  limit: 3

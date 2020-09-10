@@ -1,0 +1,28 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d80d2b12d3f0e8e4f8e0cfec55b7dbb2, type: 3}
+  m_Name: SkinPencil2
+  m_EditorClassIdentifier: 
+  environment:
+  - {fileID: 5773940622996168737, guid: 6088115f6ca1ac04888927960c84e9e8, type: 3}
+  - {fileID: 7198566075609353718, guid: 994dfe3e552ba754f832a6ba8008bc8d, type: 3}
+  - {fileID: 8663459479462554479, guid: 444dcb58b3482cb4cb5ebe6c400f9ae1, type: 3}
+  shapeId: 7
+  hopheyMesh: {fileID: -6561623048535504736, guid: bbe819ddd2a3e07448d25c75d7c798c4,
+    type: 3}
+  hopheyBodyMat: {fileID: 2100000, guid: e9750b3e45715f74085a34092f1370a2, type: 2}
+  hopheyCapMat: {fileID: 2100000, guid: 3b7871d47070c294083fb28c307037e5, type: 2}
+  particleMat: {fileID: 2100000, guid: 2b1c06b06e1ae164a80e0f97dd226e52, type: 2}
+  cutfx: {fileID: 8300000, guid: ce0ccc4954fe20d4bb791f4c96cf9635, type: 3}
+  icon: {fileID: 21300000, guid: 853e4dab0813c644e889dddea578d99a, type: 3}
+  iconBg: {fileID: 21300000, guid: 9991367c0c3b8074a86db26bd823c852, type: 3}
+  feverGlowColor: {r: 0.74509805, g: 0.1882353, b: 0.28235295, a: 0.1882353}

@@ -1,0 +1,38 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 29e2c99b8ac9a1b459223edbd83be15b, type: 3}
+  m_Name: ThemeDesert
+  m_EditorClassIdentifier: 
+  levelSelector: LevelsYellow
+  environment:
+  - {fileID: 3060017831494122771, guid: a5aceeafd90c02943a50ee7d61593ab9, type: 3}
+  - {fileID: 6874417552689162341, guid: 87c96f493d24468489382b4140258329, type: 3}
+  - {fileID: 1377938433269545640, guid: 3517977c7eeb8694398c4b5f50a7ad50, type: 3}
+  groundColor: {r: 0.9725491, g: 1, b: 0.5803922, a: 1}
+  gradientColor: {r: 0.6745098, g: 0.8588236, b: 0.36078432, a: 1}
+  darkGradientColor: {r: 0.46274513, g: 0.27450982, b: 0.023529414, a: 1}
+  groundColor1: {r: 1, g: 0.8000001, b: 0.5803922, a: 1}
+  gradientColor1: {r: 0.8352942, g: 0.8588236, b: 0.36078432, a: 1}
+  darkGradientColor1: {r: 0.7607844, g: 0.7607844, b: 0.7607844, a: 1}
+  groundColor2: {r: 1, g: 0.64705884, b: 0.5803922, a: 1}
+  gradientColor2: {r: 0.8588236, g: 0.7294118, b: 0.36078432, a: 1}
+  darkGradientColor2: {r: 0.46274513, g: 0.27450982, b: 0.023529414, a: 1}
+  groundFeverColor: {r: 0.32156864, g: 0.25490198, b: 0.011764707, a: 1}
+  gradientFeverColor: {r: 0.3019608, g: 0.47058827, b: 0.011764707, a: 1}
+  darkGradientFeverColor: {r: 0, g: 0, b: 0, a: 1}
+  feverFrameColor: {r: 1, g: 0.86274517, b: 0.21176472, a: 0.67058825}
+  feverGlowColor: {r: 0.87843144, g: 0.5764706, b: 0, a: 0.23137255}
+  accentColor: {r: 1, g: 0.9843138, b: 0.6784314, a: 1}
+  slideColor: {r: 1, g: 0.7843138, b: 0.1254902, a: 1}
+  levelTextColor: {r: 0.32941177, g: 0.32941177, b: 0.32941177, a: 1}
+  feverSlide: {r: 0, g: 0.8588236, b: 0.039215688, a: 1}
+  equipTextColor: {r: 0.8196079, g: 0, b: 0, a: 1}

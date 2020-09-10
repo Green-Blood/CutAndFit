@@ -1,0 +1,28 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d80d2b12d3f0e8e4f8e0cfec55b7dbb2, type: 3}
+  m_Name: SkinKiwi
+  m_EditorClassIdentifier: 
+  environment:
+  - {fileID: 1706531910875298191, guid: 505123073eca88b42a6affbe8e30afd0, type: 3}
+  - {fileID: 5788739898352994838, guid: 4ea9dfe74bd01134a9d346547a3b5deb, type: 3}
+  - {fileID: 1581681904828899661, guid: 184239435f7472847be07a5811d73f13, type: 3}
+  - {fileID: 1349928803635978701, guid: a6c06464113276a409a0aa1fb71fe3cb, type: 3}
+  shapeId: 0
+  hopheyMesh: {fileID: 4300000, guid: fd63be17f35535b4d99b598a3d12cbe2, type: 3}
+  hopheyBodyMat: {fileID: 2100000, guid: d699e87e86013494aa7372012f45e31b, type: 2}
+  hopheyCapMat: {fileID: 2100000, guid: 6c3c53f7ec793c64aab495e255743951, type: 2}
+  particleMat: {fileID: 2100000, guid: db47d78f1a737604eb716541a598ac21, type: 2}
+  cutfx: {fileID: 8300000, guid: d2e37ee4b2a79b846a3b0fb8257ce0f6, type: 3}
+  icon: {fileID: 21300000, guid: 249cd4caf56200d4cb2ac91751a0a4a1, type: 3}
+  iconBg: {fileID: 21300000, guid: 3c9adef81bc73a443a040733e3cfd42a, type: 3}
+  feverGlowColor: {r: 1, g: 0.38431373, b: 0.023529412, a: 0.1882353}
