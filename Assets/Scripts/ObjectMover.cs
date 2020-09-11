@@ -1,11 +1,13 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using DG.Tweening;
+using UI_Scripts;
 using UnityEngine;
 
 public class ObjectMover : MonoBehaviour
 {
     public GameObject hophey;
+    public ComboPoints comboPointsScript;    
     public bool isCut = false;
     public static bool isLoose = false;
     public static bool cutTrigger = false;
@@ -50,7 +52,7 @@ public class ObjectMover : MonoBehaviour
                 canPerfect = true;
                 hophey.transform.DOMoveX(cutSum + GameController.gameController.holeSize + 0.8f, 1.2f).SetEase(Ease.InOutCubic).OnComplete(DecreaseHop);
                 hopCount++;
-                GameController.gameController.startIncereaceHole();
+                GameController.gameController.StartIncereaceHole();
                 //Debug.Log("Forward Hop: " + (cutSize + holeSize + 0.8f));
             }
     }
@@ -63,7 +65,7 @@ public class ObjectMover : MonoBehaviour
             canPerfect = false;
             hophey.transform.DOMoveX(cutSum, 1.2f).SetEase(Ease.InOutFlash).OnComplete(IncreaseHop);
             //Debug.Log("Backward Hop: " + (cutSize));
-            GameController.gameController.increaseMoveCount(LevelTyp.LimitedMove);
+            GameController.gameController.IncreaseMoveCount(LevelTyp.LimitedMove);
         }
     }
 
@@ -96,13 +98,14 @@ public class ObjectMover : MonoBehaviour
                     chopParticle.Play();
                     cutSize = hophey.transform.position.x - cutSum;
                     cutSum = cutSize + cutSum;
-                    GameController.gameController.showPG(cutSize);
+                    GameController.gameController.ShowPg(cutSize);
                     Debug.LogError("Cut Size: " + cutSize);
                     Debug.LogError("Hole Size: " + GameController.gameController.holeSize);
                     if (cutSize / GameController.gameController.holeSize >= 1.0f - GameController.gameController.currentLvl.comboRange && cutSize / GameController.gameController.holeSize < 1.0f)
                     {
                         GameController.gameController.holeSize += GameController.gameController.currentLvl.startrHoleSize * GameController.gameController.currentLvl.deltaSize;
                         GameController.gameController.comboCount++;
+                        StartCoroutine(comboPointsScript.UpdateComboPoints(GameController.gameController.comboCount, 0.5f));
                     }
                     else
                         if (cutSize < GameController.gameController.holeSize)

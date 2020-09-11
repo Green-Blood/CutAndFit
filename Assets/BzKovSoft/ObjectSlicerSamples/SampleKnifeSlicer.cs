@@ -31,7 +31,7 @@ namespace BzKovSoft.ObjectSlicerSamples
 				//StartCoroutine(SwingSword());
 
                 gameController.cutAnim[0].Play();
-				GameController.gameController.increaseMoveCount(LevelTyp.LimitedCut);
+				GameController.gameController.IncreaseMoveCount(LevelTyp.LimitedCut);
 			}
 		}
 

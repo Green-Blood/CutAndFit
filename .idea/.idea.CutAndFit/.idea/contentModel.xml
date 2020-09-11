@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ContentModelStore">
+    <e p="C:\Users\Jey\AppData\Local\JetBrains\Rider2020.2\extResources" t="IncludeRecursive" />
+    <e p="C:\Users\Jey\AppData\Local\JetBrains\Rider2020.2\resharper-host\Local\Transient\Rider\v202\SolutionCaches\_CutAndFit.-1914638659.00" t="ExcludeRecursive" />
+    <e p="D:\StuDyworK\Unity\Projects\Model S\CutAndFit" t="IncludeRecursive">
+      <e p="Assembly-CSharp-Editor.csproj" t="IncludeRecursive" />
+      <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
+      <e p="Assets" t="Include">
+        <e p="AdultLink" t="Include">
+          <e p="Rimlight" t="Include">
+            <e p="Editor" t="Include">
+              <e p="RimlightEditor.cs" t="Include" />
+            </e>
+            <e p="Examples" t="Include">
+              <e p="Scripts" t="Include">
+                <e p="CameraController.cs" t="Include" />
+                <e p="CameraPositions.cs" t="Include" />
+                <e p="CharacterSelectionController.cs" t="Include" />
+                <e p="FollowTarget.cs" t="Include" />
+                <e p="MonkeyController.cs" t="Include" />
+                <e p="MouseController.cs" t="Include" />
+                <e p="PlayerController.cs" t="Include" />
+                <e p="RotateAround.cs" t="Include" />
+                <e p="UIController.cs" t="Include" />
+              </e>
+            </e>
+            <e p="Rimlight.shader" t="Include" />
+          </e>
+        </e>
+        <e p="BzKovSoft" t="Include">
+          <e p="CharacterSlicer" t="Include">
+            <e p="BzSliceableCharacterBase.cs" t="Include" />
+            <e p="BzSliceSkinnedMeshAddapter.cs" t="Include" />
+            <e p="CenterOfMassColliderBasedHelper.cs" t="Include" />
+            <e p="CharacterComponentManagerFast.cs" t="Include" />
+            <e p="CharacterSlicerInitializer.cs" t="Include" />
+            <e p="Editor" t="Include">
+              <e p="ChCM_RemoveComponentsTests.cs" t="Include" />
+            </e>
+          </e>
+          <e p="CharacterSlicerSamples" t="Include">
+            <e p="CharacterSlicerSampleFast.cs" t="Include" />
+            <e p="EnemyManager.cs" t="Include" />
+            <e p="IDeadable.cs" t="Include" />
+          </e>
+          <e p="ObjectSlicer" t="Include">
+            <e p="AssemblyInfo.cs" t="Include" />
+            <e p="BzMeshData.cs" t="Include" />
+            <e p="BzMeshDataDissector.cs" t="Include" />
+            <e p="BzMeshDataEditor.cs" t="Include" />
+            <e p="BzPoly.cs" t="Include" />
+            <e p="BzSliceableBase.cs" t="Include" />
+            <e p="BzSliceableCollider.cs" t="Include" />
+            <e p="BzSliceableObjectBase.cs" t="Include" />
+            <e p="BzSliceableSimple.cs" t="Include" />
+            <e p="BzSliceColliderAddapter.cs" t="Include" />
+            <e p="BzSliceConfiguration.cs" t="Include" />
+            <e p="BzSliceMeshFilterAddapter.cs" t="Include" />
+            <e p="BzSlicerHelper.cs" t="Include" />
+            <e p="BzSliceTryData.cs" t="Include" />
+            <e p="BzSliceTryResult.cs" t="Include" />
+            <e p="BzTriangle.cs" t="Include" />
+            <e p="ConvexSetResult.cs" t="Include" />
+            <e p="Editor" t="Include">
+              <e p="BzMeshDataEditorTests.cs" t="Include" />
+              <e p="BzMockAddapter.cs" t="Include" />
+              <e p="LinkedLoopTests.cs" t="Include" />
+              <e p="MyTests.cs" t="Include" />
+              <e p="ObjectSlicer.cs" t="Include" />
+              <e p="ObjectSlicerMock.cs" t="Include" />
+            </e>
+            <e p="EventHandlers" t="Include">
+              <e p="BzDeleteSecondJoint.cs" t="Include" />
+              <e p="BzFixMass.cs" t="Include" />
+              <e p="BzFixMassSmart.cs" t="Include" />
+              <e p="BzReaplyForce.cs" t="Include" />
+              <e p="IBzObjectSlicedEvent.cs" t="Include" />
+              <e p="MeshGenerator" t="Include">
+                <e p="Capsule.cs" t="Include" />
+                <e p="Cube.cs" t="Include" />
+                <e p="Editor" t="Include">
+                  <e p="CapsuleTests.cs" t="Include" />
+                </e>
+                <e p="IcoSphere.cs" t="Include" />
+              </e>
+            </e>
+            <e p="FallingObjGC.cs" t="Include" />
+            <e p="IBzSliceable.cs" t="Include" />
+            <e p="IBzSliceableAsync.cs" t="Include" />
+            <e p="IBzSliceAddapter.cs" t="Include" />
+            <e p="IComponentManager.cs" t="Include" />
+            <e p="LazyActionRunner.cs" t="Include" />
+            <e p="LinkedLoop.cs" t="Include" />
+            <e p="ObjectSlicerInitializer.cs" t="Include" />
+            <e p="SliceResult.cs" t="Include" />
+            <e p="SliceTry.cs" t="Include" />
+            <e p="SliceTryItem.cs" t="Include" />
+            <e p="StaticComponentManager.cs" t="Include" />
+          </e>
+          <e p="ObjectSlicerSamples" t="Include">
+            <e p="AdderSliceableAsync.cs" t="Include" />
+            <e p="BzKnife.cs" t="Include" />
+            <e p="KnifeSliceableAsync.cs" t="Include" />
+            <e p="MoveCamera.cs" t="Include" />
+            <e p="ObjectSlicerSample.cs" t="Include" />
+            <e p="SampleKnifeSlicer.cs" t="Include" />
+            <e p="SampleMouseSlicer.cs" t="Include" />
+          </e>
+        </e>
+        <e p="DOTween" t="Include">
+          <e p="Modules" t="Include">
+            <e p="DOTweenModuleAudio.cs" t="Include" />
+            <e p="DOTweenModulePhysics.cs" t="Include" />
+            <e p="DOTweenModulePhysics2D.cs" t="Include" />
+            <e p="DOTweenModuleSprite.cs" t="Include" />
+            <e p="DOTweenModuleUI.cs" t="Include" />
+            <e p="DOTweenModuleUnityVersion.cs" t="Include" />
+            <e p="DOTweenModuleUtils.cs" t="Include" />
+          </e>
+          <e p="readme.txt" t="Include" />
+        </e>
+        <e p="Editor" t="Include">
+          <e p="SetPivot.cs" t="Include" />
+        </e>
+        <e p="Scripts" t="Include">
+          <e p="CutterData.cs" t="Include" />
+          <e p="GameController.cs" t="Include" />
+          <e p="LevelData.cs" t="Include" />
+          <e p="LevelsData.cs" t="Include" />
+          <e p="ObjectMover.cs" t="Include" />
+          <e p="SkinData.cs" t="Include" />
+          <e p="ThemeData.cs" t="Include" />
+          <e p="UI Scripts" t="Include">
+            <e p="ComboPoints.cs" t="Include" />
+            <e p="ProgressBar.cs" t="Include" />
+          </e>
+        </e>
+        <e p="TextMesh Pro" t="Include">
+          <e p="Fonts" t="Include">
+            <e p="LiberationSans - OFL.txt" t="Include" />
+          </e>
+          <e p="Resources" t="Include">
+            <e p="LineBreaking Following Characters.txt" t="Include" />
+            <e p="LineBreaking Leading Characters.txt" t="Include" />
+            <e p="Shaders" t="Include">
+              <e p="TMP_Bitmap-Custom-Atlas.shader" t="Include" />
+              <e p="TMP_Bitmap-Mobile.shader" t="Include" />
+              <e p="TMP_Bitmap.shader" t="Include" />
+              <e p="TMP_SDF Overlay.shader" t="Include" />
+              <e p="TMP_SDF-Mobile Masking.shader" t="Include" />
+              <e p="TMP_SDF-Mobile Overlay.shader" t="Include" />
+              <e p="TMP_SDF-Mobile.shader" t="Include" />
+              <e p="TMP_SDF-Surface-Mobile.shader" t="Include" />
+              <e p="TMP_SDF-Surface.shader" t="Include" />
+              <e p="TMP_SDF.shader" t="Include" />
+              <e p="TMP_Sprite.shader" t="Include" />
+              <e p="TMPro.cginc" t="Include" />
+              <e p="TMPro_Properties.cginc" t="Include" />
+              <e p="TMPro_Surface.cginc" t="Include" />
+            </e>
+          </e>
+          <e p="Sprites" t="Include">
+            <e p="EmojiOne Attribution.txt" t="Include" />
+          </e>
+        </e>
+      </e>
+      <e p="CutAndFit.sln" t="IncludeFlat" />
+      <e p="obj" t="ExcludeRecursive" />
+      <e p="Packages" t="ExcludeRecursive" />
+      <e p="Temp\bin" t="ExcludeRecursive" />
+    </e>
+  </component>
+</project>

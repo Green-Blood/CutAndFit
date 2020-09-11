@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="5add63d4-0925-4cab-9ae8-682f9729afe1" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/Assets/3D/Materials/lightbox.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/3D/Materials/lightbox.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/BzKovSoft/ObjectSlicerSamples/SampleKnifeSlicer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/BzKovSoft/ObjectSlicerSamples/SampleKnifeSlicer.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CutterData.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CutterData.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GameController.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GameController.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/LevelData.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/LevelData.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/LevelsData.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/LevelsData.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ObjectMover.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ObjectMover.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/GamePlay.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/GamePlay.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SkinData.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SkinData.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ThemeData.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ThemeData.cs.meta" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI Scripts/ProgressBar.cs" root0="FORCE_HIGHLIGHTING" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/Assets/GameController.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/LevelsData.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/UI Scripts/ProgressBar.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/ObjectMover.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/GameController.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/UI Scripts/ComboPoints.cs" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectId" id="1hJnIsR3pjsgwuYEBQ6HsUFQJJS" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="Discover.Launch.Via.Unity" value="true" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
+    <configuration name="Attach to Unity Editor &amp; Play" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="UNITY_ATTACH_AND_PLAY" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
+      <option name="allowRunningInParallel" value="false" />
+      <option name="listenPortForConnections" value="false" />
+      <option name="pid" />
+      <option name="selectedOptions">
+        <set />
+      </option>
+      <method v="2" />
+    </configuration>
+    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
+      <option name="allowRunningInParallel" value="false" />
+      <option name="listenPortForConnections" value="false" />
+      <option name="pid" />
+      <option name="selectedOptions">
+        <set />
+      </option>
+      <method v="2" />
+    </configuration>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="5add63d4-0925-4cab-9ae8-682f9729afe1" name="Default Changelist" comment="" />
+      <created>1599738008489</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1599738008489</updated>
+      <workItem from="1599738008490" duration="728000" />
+      <workItem from="1599739234640" duration="1035000" />
+      <workItem from="1599806376277" duration="14388000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="UnityProjectConfiguration" hasMinimizedUI="true" />
+  <component name="UnityUnitTestConfiguration" currentTestLauncher="EditMode" />
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="535" y="141" key="RiderGenerateDialog" timestamp="1599806915528">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state x="535" y="141" key="RiderGenerateDialog/0.0.1536.834@0.0.1536.834" timestamp="1599806915528" />
+    <state x="93" y="93" width="1350" height="648" key="VCS.FileHistoryDialog" timestamp="1599807353926">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state x="93" y="93" width="1350" height="648" key="VCS.FileHistoryDialog/0.0.1536.834@0.0.1536.834" timestamp="1599807353926" />
+    <state x="361" y="150" key="Vcs.Push.Dialog.v2" timestamp="1599806844132">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state x="361" y="150" key="Vcs.Push.Dialog.v2/0.0.1536.834@0.0.1536.834" timestamp="1599806844132" />
+  </component>
+</project>

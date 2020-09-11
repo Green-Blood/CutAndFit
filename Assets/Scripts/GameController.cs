@@ -1,5 +1,7 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
+using UI_Scripts;
 using UnityEngine;
 using UnityEngine.Networking;
 using UnityEngine.UI;
@@ -28,15 +30,24 @@ public class GameController : MonoBehaviour
     public ParticleSystem chopParticle;
     public GameObject groundObj;
     public Animation[] cutAnim;
-    [Header("For Level Designer")]
-    public bool canMove = true;
+    [Header("For Level Designer")] public bool canMove = true;
     public float holeSize = 1.5f;
     public float comboHole = 0.0f;
-    public int comboCount=0;
+    public int comboCount = 0;
+    [Header("Level Settings")] public LevelsData levelsData;
     public LevelSettings currentLvl;
-    public Image prgImg;
+    public int currentLvlNumber = 0;
+
+    [Header("UI")] public Image prgImg;
+    [SerializeField] private ProgressBar progressBarScript;
+    [SerializeField] private ComboPoints comboPointsScript;
+
+
     private void Awake()
     {
+        // Should be changed
+        currentLvl = levelsData.levels[currentLvlNumber];
+
         gameController = this;
         holeSize = currentLvl.startrHoleSize;
         comboHole = currentLvl.startrHoleSize;
@@ -82,29 +93,42 @@ public class GameController : MonoBehaviour
             sr.color = themes[themeVisuals].darkGradientColor;
         }
     }
+
     private void Start()
     {
         prgImg.fillAmount = 0.0f;
         comboCount = 1;
     }
+
     private void Update()
     {
-        holeSlider.transform.position = new Vector3(Mathf.Lerp(holeSlider.transform.position.x, holeSize + 5f, Time.deltaTime * 5), holeSlider.transform.position.y, holeSlider.transform.position.z);
-        holeEffect.transform.localScale = new Vector3(Mathf.Lerp(holeEffect.transform.localScale.x, holeSize, Time.deltaTime * 5), holeEffect.transform.localScale.y, holeEffect.transform.localScale.z);
+        holeSlider.transform.position =
+            new Vector3(Mathf.Lerp(holeSlider.transform.position.x, holeSize + 5f, Time.deltaTime * 5),
+                holeSlider.transform.position.y, holeSlider.transform.position.z);
+        holeEffect.transform.localScale =
+            new Vector3(Mathf.Lerp(holeEffect.transform.localScale.x, holeSize, Time.deltaTime * 5),
+                holeEffect.transform.localScale.y, holeEffect.transform.localScale.z);
         //if (ObjectMover.hopCount >= 10)
         //    Debug.LogError("You Lose! (hop count exceeded)");
         //if (ObjectMover.sliceCount >= 10)
         //    Debug.LogError("You Lose! (slice count exceeded)");
 
+        if (prgImg.fillAmount >= 0.99f)
+        {
+            NextLevel();
+        }
     }
-    public void increaseMoveCount(LevelTyp typ)
+
+    public void IncreaseMoveCount(LevelTyp typ)
     {
-        if(currentLvl.levelTyp == typ)
-        if (--currentLvl.limitScene <= 0)
-            canMove = false;
+        if (currentLvl.levelTyp == typ)
+            if (--currentLvl.limitScene <= 0)
+                canMove = false;
     }
+
     public bool isIncreace = false;
-    public void startIncereaceHole()
+
+    public void StartIncereaceHole()
     {
         if (isIncreace)
         {
@@ -114,6 +138,7 @@ public class GameController : MonoBehaviour
 
 //        StartCoroutine(IncereaceHole());
     }
+
     public IEnumerator IncereaceHole()
     {
         yield return new WaitForSeconds(0.2f);
@@ -123,21 +148,33 @@ public class GameController : MonoBehaviour
             isIncreace = false;
         }
     }
-    public void showPG(float cutSize)
+
+
+    public void ShowPg(float cutSize)
     {
-        float s = (1+((float)comboCount*(float)0.1)) / currentLvl.levelN * cutSize / comboHole;
+        float s = (1 + ((float) comboCount * (float) 0.1)) / currentLvl.cutN * cutSize / comboHole;
         prgImg.fillAmount += s;
         comboHole = holeSize;
-        Debug.Log(comboCount);
     }
+
+    #region Arbuz's part
+
+    public void NextLevel()
+    {
+        currentLvl = levelsData.levels[currentLvlNumber++];
+        progressBarScript.UpdateProgressBar();
+    }
+
+    #endregion
 }
 
 public enum LevelTyp
 {
-    notLimited,
+    NotLimited,
     LimitedMove,
     LimitedCut
 }
+
 [System.Serializable]
 public class LevelSettings
 {
@@ -146,5 +183,5 @@ public class LevelSettings
     public float startrHoleSize = 2.5f;
     public float deltaSize = 0.1f;
     public float comboRange = 0.1f;
-    public int levelN = 5;
+    public int cutN = 5;
 }
