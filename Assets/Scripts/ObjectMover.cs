@@ -153,7 +153,7 @@ public class ObjectMover : MonoBehaviour
             }
             if (isLoose)
             {
-                if (!_cuttedHophey.GetComponent<Rigidbody>().IsSleeping())
+                if (diff >= 0.05f)
                 {
                     Debug.LogError("You Suck!");
                     isPlaying = false;
