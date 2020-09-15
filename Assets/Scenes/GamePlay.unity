@@ -8229,8 +8229,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   holeSlider: {fileID: 148722930}
   holeEffect: {fileID: 1306660326}
-  levelVisuals: 1
-  cutterVisuals: 5
+  levelVisuals: 7
+  cutterVisuals: 0
   themeVisuals: 2
   skins:
   - {fileID: 11400000, guid: 2dfeb1360d8f8bb4ab3d3e8056893e2c, type: 2}

@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 2910520599723279150}
   m_Layer: 0
   m_Name: cutter1_roundcube
-  m_TagString: Untagged
+  m_TagString: chopper
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -56,6 +56,7 @@ MeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -67,6 +68,7 @@ MeshRenderer:
   m_ProbeAnchor: {fileID: 0}
   m_LightProbeVolumeOverride: {fileID: 0}
   m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
@@ -120,7 +122,7 @@ PrefabInstance:
     - target: {fileID: 4611278506404061773, guid: c75ade39746da0b49891718baf6ce823,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0.57
+      value: 0.638
       objectReference: {fileID: 0}
     - target: {fileID: 4611278506404061773, guid: c75ade39746da0b49891718baf6ce823,
         type: 3}

@@ -13,14 +13,14 @@ public class GameController : MonoBehaviour
     public static GameController gameController;
     public GameObject holeSlider;
     public GameObject holeEffect;
-    [HideInInspector]
     public static SkinData currentSkin;
-    [HideInInspector]
     public static CutterData currentCutter;
-    [HideInInspector]
     public static ThemeData currentTheme;
+    //[HideInInspector]
     public int levelVisuals;
+    //[HideInInspector]
     public int cutterVisuals;
+    //[HideInInspector]
     public int themeVisuals;
     public SkinData[] skins;
     public CutterData[] cutters;
@@ -63,8 +63,8 @@ public class GameController : MonoBehaviour
         comboHole = currentLvl.startrHoleSize;
         Application.targetFrameRate = 60;
         themeVisuals = UnityEngine.Random.Range(0, themes.Length);
-        levelVisuals = 1;
-        cutterVisuals = UnityEngine.Random.Range(0, cutters.Length);
+        //levelVisuals = 2;
+        //cutterVisuals = 7;
         currentTheme = themes[themeVisuals];
         currentSkin = skins[levelVisuals];
         currentCutter = cutters[cutterVisuals];
