@@ -5,14 +5,19 @@ using UI_Scripts;
 using UnityEngine;
 using UnityEngine.Networking;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class GameController : MonoBehaviour
 {
+    public static bool canLoadLevel = true;
     public static GameController gameController;
     public GameObject holeSlider;
     public GameObject holeEffect;
+    [HideInInspector]
     public static SkinData currentSkin;
+    [HideInInspector]
     public static CutterData currentCutter;
+    [HideInInspector]
     public static ThemeData currentTheme;
     public int levelVisuals;
     public int cutterVisuals;
@@ -30,12 +35,15 @@ public class GameController : MonoBehaviour
     public ParticleSystem chopParticle;
     public GameObject groundObj;
     public Animation[] cutAnim;
+    public Button nextLvlBtn;
+    private bool _isNextLvl = true;
     [Header("For Level Designer")] public bool canMove = true;
     public float holeSize = 1.5f;
     public float comboHole = 0.0f;
     public int comboCount = 0;
     [Header("Level Settings")] public LevelsData levelsData;
     public LevelSettings currentLvl;
+    [HideInInspector]
     public int currentLvlNumber = 0;
 
     [Header("UI")] public Image prgImg;
@@ -45,6 +53,8 @@ public class GameController : MonoBehaviour
 
     private void Awake()
     {
+        if(canLoadLevel)
+            currentLvlNumber = PlayerPrefs.GetInt("currentLvl");
         // Should be changed
         currentLvl = levelsData.levels[currentLvlNumber];
 
@@ -52,6 +62,9 @@ public class GameController : MonoBehaviour
         holeSize = currentLvl.startrHoleSize;
         comboHole = currentLvl.startrHoleSize;
         Application.targetFrameRate = 60;
+        themeVisuals = UnityEngine.Random.Range(0, themes.Length);
+        levelVisuals = 1;
+        cutterVisuals = UnityEngine.Random.Range(0, cutters.Length);
         currentTheme = themes[themeVisuals];
         currentSkin = skins[levelVisuals];
         currentCutter = cutters[cutterVisuals];
@@ -98,6 +111,7 @@ public class GameController : MonoBehaviour
     {
         prgImg.fillAmount = 0.0f;
         comboCount = 1;
+        _isNextLvl = true;
     }
 
     private void Update()
@@ -113,8 +127,9 @@ public class GameController : MonoBehaviour
         //if (ObjectMover.sliceCount >= 10)
         //    Debug.LogError("You Lose! (slice count exceeded)");
 
-        if (prgImg.fillAmount >= 0.99f)
+        if (prgImg.fillAmount >= 0.99f && _isNextLvl)
         {
+            _isNextLvl = false;
             NextLevel();
         }
     }
@@ -133,6 +148,8 @@ public class GameController : MonoBehaviour
         if (isIncreace)
         {
             holeSize = ObjectMover.cutSize;
+            if (holeSize < 2f)
+                holeSize = 2f;
             isIncreace = false;
         }
 
@@ -161,11 +178,28 @@ public class GameController : MonoBehaviour
 
     public void NextLevel()
     {
+        canMove = false;
+        Debug.Log("Congratulations");
         currentLvl = levelsData.levels[currentLvlNumber++];
-        progressBarScript.UpdateProgressBar();
+        PlayerPrefs.SetInt("currentLvl", currentLvlNumber);
+        PlayerPrefs.Save();
+        nextLvlBtn.gameObject.SetActive(true);
+        ObjectMover.cutSize = 0f;
+        ObjectMover.cutSum = 0f;
+        //progressBarScript.UpdateProgressBar();
     }
 
     #endregion
+
+    public void NextLvlButton()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+    }
+
+    public void DeleteKeys()
+    {
+        PlayerPrefs.DeleteAll();
+    }
 }
 
 public enum LevelTyp

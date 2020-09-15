@@ -98,14 +98,21 @@ public class ObjectMover : MonoBehaviour
                     chopParticle.Play();
                     cutSize = hophey.transform.position.x - cutSum;
                     cutSum = cutSize + cutSum;
-                    GameController.gameController.ShowPg(cutSize);
                     Debug.LogError("Cut Size: " + cutSize);
                     Debug.LogError("Hole Size: " + GameController.gameController.holeSize);
                     if (cutSize / GameController.gameController.holeSize >= 1.0f - GameController.gameController.currentLvl.comboRange && cutSize / GameController.gameController.holeSize < 1.0f)
                     {
-                        GameController.gameController.holeSize += GameController.gameController.currentLvl.startrHoleSize * GameController.gameController.currentLvl.deltaSize;
-                        GameController.gameController.comboCount++;
-                        StartCoroutine(comboPointsScript.UpdateComboPoints(GameController.gameController.comboCount, 0.5f));
+                        GameController.gameController.ShowPg(cutSize);
+                        StartCoroutine(ResizeHole());
+                        if (canPerfect)
+                        {
+                            GameController.gameController.comboCount++;
+                            StartCoroutine(comboPointsScript.UpdateComboPoints(GameController.gameController.comboCount, 0.5f));
+                        }
+                        else
+                        {
+                            GameController.gameController.comboCount = 1;
+                        }
                     }
                     else
                         if (cutSize < GameController.gameController.holeSize)
@@ -139,7 +146,7 @@ public class ObjectMover : MonoBehaviour
                         //    StartCoroutine(ResizeHole(cutSize));
                         //}
                     }
-                    else if (cutSize > GameController.gameController.holeSize)
+                    else if (cutSize > GameController.gameController.holeSize + 0.01f)
                     {
                         isLoose = true;
                         hophey.transform.DOKill();
@@ -157,7 +164,7 @@ public class ObjectMover : MonoBehaviour
                 {
                     Debug.LogError("You Suck!");
                     isPlaying = false;
-                    hophey.transform.DOKill();
+                    GameController.gameController.canMove = false;
                 }
                 else
                 {
@@ -175,19 +182,13 @@ public class ObjectMover : MonoBehaviour
             hophey.transform.DOMoveX(cutSum, 0.5f).SetEase(Ease.InOutCubic).OnComplete(IncreaseHop);
     }
 
-    IEnumerator ResizeHole(float size)
+    IEnumerator ResizeHole()
     {
-        yield return new WaitForSeconds(1f);
+        yield return new WaitForSeconds(0.5f);
 
-        if (size < GameController.gameController.holeSize)
-        {
-            GameController.gameController.holeSize -= (GameController.gameController.holeSize - size) / 3;
-            if (GameController.gameController.holeSize < 1f)
-                GameController.gameController.holeSize = 1f;
-        }
-        else
-        {
-            GameController.gameController.holeSize = size;
-        }
+        GameController.gameController.holeSize += GameController.gameController.currentLvl.startrHoleSize * GameController.gameController.currentLvl.deltaSize;
+        Debug.Log(GameController.gameController.holeSize);
+        if (GameController.gameController.holeSize < 2f)
+            GameController.gameController.holeSize = 2f;
     }
 }
