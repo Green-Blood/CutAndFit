@@ -19,7 +19,7 @@ namespace UI_Scripts
         {
             gameController.prgImg.fillAmount = 0f;
             
-            int lvlNumber = gameController.currentLvlNumber;
+            int lvlNumber = GameController.currentLvlNumber;
             lvlNumber++;
             currentLevelText.text = lvlNumber.ToString();
             lvlNumber++;

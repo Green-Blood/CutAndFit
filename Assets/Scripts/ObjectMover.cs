@@ -12,7 +12,7 @@ public class ObjectMover : MonoBehaviour
     public static bool isLoose = false;
     public static bool cutTrigger = false;
     public static bool isStart = true;
-    public static bool isPlaying = true;
+    public static bool isPlaying = false;
     public static float cutSize = 0f;
     public static float cutSum = 0f;
    // public float holeSize = 0f;
@@ -27,16 +27,25 @@ public class ObjectMover : MonoBehaviour
 
     private void Start()
     {
-
-        hophey.transform.position = new Vector3(hophey.transform.position.x, hophey.transform.position.y, hophey.transform.position.z);
-        //holeSize = GameController.gameController.holeSize;
-        if (isStart)
+        if (!GameController.isMainMenu)
         {
-            isStart = false;
-            StartHop();
+            hophey.transform.position = new Vector3(hophey.transform.position.x, hophey.transform.position.y, hophey.transform.position.z);
+            //holeSize = GameController.gameController.holeSize;
+            if (isStart)
+            {
+                isStart = false;
+                StartHop();
+            }
+            else if (!isLoose)
+                StartCoroutine(StartHopRoutine());
+
+            GameController.gameController.mainMenu.SetActive(false);
+            GameController.gameController.gameplayMenu.SetActive(true);
         }
-        else if (!isLoose)
-            StartCoroutine(StartHopRoutine());
+        else
+        {
+
+        }
     }
     void StartHop()
     {
@@ -81,6 +90,24 @@ public class ObjectMover : MonoBehaviour
     //        Debug.LogError("Bumm");
     //    }
     //}
+
+    public void StartRound()
+    {
+        hophey.transform.position = new Vector3(hophey.transform.position.x, hophey.transform.position.y, hophey.transform.position.z);
+        //holeSize = GameController.gameController.holeSize;
+        if (isStart)
+        {
+            isStart = false;
+            StartHop();
+        }
+        else if (!isLoose)
+            StartCoroutine(StartHopRoutine());
+
+        GameController.gameController.mainMenu.SetActive(false);
+        GameController.gameController.gameplayMenu.SetActive(true);
+        GameController.isMainMenu = false;
+        isPlaying = true;
+    }
 
     private void Update()
     {

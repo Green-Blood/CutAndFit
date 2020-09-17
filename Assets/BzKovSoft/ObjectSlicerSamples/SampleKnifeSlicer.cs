@@ -24,15 +24,18 @@ namespace BzKovSoft.ObjectSlicerSamples
         public GameController gameController;
 		void Update()
 		{
-			if (Input.GetMouseButtonDown(0)&&GameController.gameController.canMove)
-			{
-				var knife = _blade.GetComponentInChildren<BzKnife>();
-                knife.BeginNewSlice();
-				//StartCoroutine(SwingSword());
+            if (ObjectMover.isPlaying)
+            {
+                if (Input.GetMouseButtonDown(0) && GameController.gameController.canMove)
+                {
+                    var knife = _blade.GetComponentInChildren<BzKnife>();
+                    knife.BeginNewSlice();
+                    //StartCoroutine(SwingSword());
 
-                gameController.cutAnim[0].Play();
-				GameController.gameController.IncreaseMoveCount(LevelTyp.LimitedCut);
-			}
+                    gameController.cutAnim[0].Play();
+                    GameController.gameController.IncreaseMoveCount(LevelTyp.LimitedCut);
+                }
+            }
 		}
 
 		IEnumerator SwingSword()

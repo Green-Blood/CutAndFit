@@ -10,6 +10,7 @@ using UnityEngine.SceneManagement;
 public class GameController : MonoBehaviour
 {
     public static bool canLoadLevel = true;
+    public static bool isMainMenu = true;
     public static GameController gameController;
     public GameObject holeSlider;
     public GameObject holeEffect;
@@ -34,7 +35,13 @@ public class GameController : MonoBehaviour
     public SpriteRenderer[] darkGradient;
     public ParticleSystem chopParticle;
     public GameObject groundObj;
+    public GameObject mainMenu;
+    public GameObject subMenu;
+    public GameObject gameplayMenu;
+    public GameObject cutterShop;
+    public GameObject skinShop;
     public Animation[] cutAnim;
+    public Animator shopAnimator;
     public Button nextLvlBtn;
     private bool _isNextLvl = true;
     [Header("For Level Designer")] public bool canMove = true;
@@ -44,7 +51,7 @@ public class GameController : MonoBehaviour
     [Header("Level Settings")] public LevelsData levelsData;
     public LevelSettings currentLvl;
     [HideInInspector]
-    public int currentLvlNumber = 0;
+    public static int currentLvlNumber = 0;
 
     [Header("UI")] public Image prgImg;
     [SerializeField] private ProgressBar progressBarScript;
@@ -112,10 +119,25 @@ public class GameController : MonoBehaviour
         prgImg.fillAmount = 0.0f;
         comboCount = 1;
         _isNextLvl = true;
+        if (isMainMenu)
+        {
+            if (currentLvlNumber == 0)
+            {
+                PlayerPrefs.SetInt("currentLvl", 1);
+                currentLvlNumber = 1;
+            }
+        }
     }
 
     private void Update()
     {
+        if (isMainMenu)
+        {
+            if (shopAnimator.GetBool("cutterOpened"))
+            {
+
+            }
+        }
         holeSlider.transform.position =
             new Vector3(Mathf.Lerp(holeSlider.transform.position.x, holeSize + 5f, Time.deltaTime * 5),
                 holeSlider.transform.position.y, holeSlider.transform.position.z);
@@ -199,6 +221,34 @@ public class GameController : MonoBehaviour
     public void DeleteKeys()
     {
         PlayerPrefs.DeleteAll();
+    }
+
+    public void OpenShop(int shopId)
+    {
+        if (shopId == 0)
+        {
+            subMenu.SetActive(false);
+            skinShop.SetActive(false);
+            cutterShop.SetActive(true);
+            shopAnimator.SetBool("cutterOpened", true);
+        }
+            
+        if (shopId == 1)
+        {
+            subMenu.SetActive(false);
+            cutterShop.SetActive(false);
+            skinShop.SetActive(true);
+            shopAnimator.SetBool("skinOpened", true);
+        }
+    }
+
+    public void CloseShop(int shopId)
+    {
+        if (shopId == 0)
+            cutterShop.SetActive(false);
+
+        if (shopId == 1)
+            skinShop.SetActive(false);
     }
 }
 
