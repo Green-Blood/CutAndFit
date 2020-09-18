@@ -24,6 +24,10 @@ namespace BzKovSoft.ObjectSlicerSamples
         public GameController gameController;
 		void Update()
 		{
+            if (_blade == null)
+            {
+                _blade = GameObject.FindGameObjectWithTag("chopper");
+            }
             if (ObjectMover.isPlaying)
             {
                 if (Input.GetMouseButtonDown(0) && GameController.gameController.canMove)

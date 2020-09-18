@@ -5,6 +5,7 @@ using UI_Scripts;
 using UnityEngine;
 using UnityEngine.Networking;
 using UnityEngine.UI;
+using DG.Tweening;
 using UnityEngine.SceneManagement;
 
 public class GameController : MonoBehaviour
@@ -17,17 +18,19 @@ public class GameController : MonoBehaviour
     public static SkinData currentSkin;
     public static CutterData currentCutter;
     public static ThemeData currentTheme;
+    public static Material[] mats;
     //[HideInInspector]
-    public int levelVisuals;
+    public static int levelVisuals;
     //[HideInInspector]
-    public int cutterVisuals;
+    public static int cutterVisuals;
     //[HideInInspector]
-    public int themeVisuals;
+    public static int themeVisuals;
     public SkinData[] skins;
     public CutterData[] cutters;
     public ThemeData[] themes;
     public Transform[] handlers;
     public GameObject hophey;
+    public GameObject cutter;
     public MeshRenderer hopheyMesh;
     public MeshCollider hopheyCollider;
     public Material groundMat;
@@ -40,8 +43,9 @@ public class GameController : MonoBehaviour
     public GameObject gameplayMenu;
     public GameObject cutterShop;
     public GameObject skinShop;
+    public GameObject cutterToggle;
+    public GameObject skinToggle;
     public Animation[] cutAnim;
-    public Animator shopAnimator;
     public Button nextLvlBtn;
     private bool _isNextLvl = true;
     [Header("For Level Designer")] public bool canMove = true;
@@ -69,6 +73,7 @@ public class GameController : MonoBehaviour
         holeSize = currentLvl.startrHoleSize;
         comboHole = currentLvl.startrHoleSize;
         Application.targetFrameRate = 60;
+        levelVisuals = PlayerPrefs.GetInt("visual");
         themeVisuals = UnityEngine.Random.Range(0, themes.Length);
         //levelVisuals = 2;
         //cutterVisuals = 7;
@@ -79,7 +84,7 @@ public class GameController : MonoBehaviour
             currentLvl.limitScene = currentCutter.limit;
         hophey.GetComponent<MeshFilter>().mesh = currentSkin.hopheyMesh;
         hopheyCollider.sharedMesh = currentSkin.hopheyMesh;
-        Material[] mats = hopheyMesh.materials;
+        mats = hopheyMesh.materials;
         mats[0] = skins[levelVisuals].hopheyCapMat;
         mats[1] = skins[levelVisuals].hopheyBodyMat;
         hopheyMesh.materials = mats;
@@ -98,7 +103,7 @@ public class GameController : MonoBehaviour
 
         for (int i = 0; i < handlers.Length; i++)
         {
-            GameObject cutter = Instantiate(cutters[cutterVisuals].cutters[skins[levelVisuals].shapeId]);
+            cutter = Instantiate(cutters[cutterVisuals].cutters[skins[levelVisuals].shapeId]);
             cutter.transform.parent = handlers[i];
             cutter.transform.localPosition = Vector3.zero;
             cutter.transform.localScale = Vector3.one;
@@ -131,13 +136,6 @@ public class GameController : MonoBehaviour
 
     private void Update()
     {
-        if (isMainMenu)
-        {
-            if (shopAnimator.GetBool("cutterOpened"))
-            {
-
-            }
-        }
         holeSlider.transform.position =
             new Vector3(Mathf.Lerp(holeSlider.transform.position.x, holeSize + 5f, Time.deltaTime * 5),
                 holeSlider.transform.position.y, holeSlider.transform.position.z);
@@ -223,32 +221,52 @@ public class GameController : MonoBehaviour
         PlayerPrefs.DeleteAll();
     }
 
-    public void OpenShop(int shopId)
+    public void OpenCutterShop(Boolean isOn)
     {
-        if (shopId == 0)
+        if (isOn)
         {
+            if (skinShop.activeInHierarchy)
+            {
+                skinShop.SetActive(false);
+                skinToggle.GetComponent<Toggle>().isOn = false;
+                skinToggle.transform.DOMoveY(-44f, 0.5f).SetEase(Ease.InOutCubic);
+            }
+            cutterToggle.transform.DOMoveY(0f, 0.5f).SetEase(Ease.InOutCubic);
             subMenu.SetActive(false);
-            skinShop.SetActive(false);
             cutterShop.SetActive(true);
-            shopAnimator.SetBool("cutterOpened", true);
         }
-            
-        if (shopId == 1)
+        else
         {
-            subMenu.SetActive(false);
+            cutterToggle.transform.DOMoveY(-44f, 0.5f).SetEase(Ease.InOutCubic);
             cutterShop.SetActive(false);
+            subMenu.SetActive(true);
+        }
+    }
+    public void OpenSkinShop(Boolean isOn)
+    {
+        if (isOn)
+        {
+            if (cutterShop.activeInHierarchy)
+            {
+                cutterShop.SetActive(false);
+                cutterToggle.GetComponent<Toggle>().isOn = false;
+                cutterToggle.transform.DOMoveY(-44f, 0.5f).SetEase(Ease.InOutCubic);
+            }
+            skinToggle.transform.DOMoveY(0f, 0.5f).SetEase(Ease.InOutCubic);
+            subMenu.SetActive(false);
             skinShop.SetActive(true);
-            shopAnimator.SetBool("skinOpened", true);
+        }
+        else
+        {
+            skinToggle.transform.DOMoveY(-44f, 0.5f).SetEase(Ease.InOutCubic);
+            skinShop.SetActive(false);
+            subMenu.SetActive(true);
         }
     }
 
-    public void CloseShop(int shopId)
+    public void Equip()
     {
-        if (shopId == 0)
-            cutterShop.SetActive(false);
 
-        if (shopId == 1)
-            skinShop.SetActive(false);
     }
 }
 
