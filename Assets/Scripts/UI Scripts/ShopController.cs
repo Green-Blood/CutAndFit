@@ -70,6 +70,8 @@ public class ShopController : MonoBehaviour
             gameController.cutter.transform.localScale = Vector3.one;
             gameController.cutter.transform.localEulerAngles = Vector3.zero;
             gameController.cutAnim[i] = gameController.cutter.GetComponent<Animation>();
+            if (gameController.currentLvl.levelTyp == LevelTyp.LimitedCut)
+                gameController.currentLvl.limitScene = GameController.currentCutter.limit;
         }
     }
 }

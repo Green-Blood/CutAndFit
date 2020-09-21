@@ -285,6 +285,17 @@ public class GameController : MonoBehaviour
         ObjectMover.isPlaying = true;
         ObjectMover.isLoose = false;
     }
+
+    public void Home()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        isMainMenu = true;
+        ObjectMover.cutSize = 0f;
+        ObjectMover.cutSum = 0f;
+        ObjectMover.isLoose = false;
+        mainMenu.SetActive(true);
+        restartMenu.SetActive(false);
+    }
 }
 
 public enum LevelTyp
