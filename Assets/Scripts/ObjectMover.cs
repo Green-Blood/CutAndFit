@@ -10,6 +10,7 @@ public class ObjectMover : MonoBehaviour
     public GameController gameController;
     public ComboPoints comboPointsScript;    
     public bool isCut = false;
+    public static bool bossLevel;
     public static bool isLoose = false;
     public static bool cutTrigger = false;
     public static bool isStart = true;
@@ -34,8 +35,15 @@ public class ObjectMover : MonoBehaviour
             //holeSize = GameController.gameController.holeSize;
             if (isStart)
             {
-                isStart = false;
-                StartHop();
+                if (!bossLevel)
+                {
+                    isStart = false;
+                    StartHop();
+                }
+                if (bossLevel)
+                {
+                    
+                }
             }
             else if (!isLoose)
                 StartCoroutine(StartHopRoutine());
@@ -188,7 +196,7 @@ public class ObjectMover : MonoBehaviour
             }
             if (isLoose)
             {
-                if (diff >= 0.05f)
+                if (diff >= 0.03f)
                 {
                     Debug.LogError("You Suck!");
                     isPlaying = false;

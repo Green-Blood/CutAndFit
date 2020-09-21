@@ -74,6 +74,16 @@ public class GameController : MonoBehaviour
         holeSize = currentLvl.startrHoleSize;
         comboHole = currentLvl.startrHoleSize;
         Application.targetFrameRate = 60;
+
+        if (currentLvlNumber % (10) == 3)
+        {
+            ObjectMover.bossLevel = true;
+        }
+        else if (currentLvlNumber % (10) == 8)
+        {
+            ObjectMover.bossLevel = true;
+        }
+
         gameController.restartMenu.SetActive(false);
         levelVisuals = PlayerPrefs.GetInt("visual");
         cutterVisuals = PlayerPrefs.GetInt("cuttervisual");
