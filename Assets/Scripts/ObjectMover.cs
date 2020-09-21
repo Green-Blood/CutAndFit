@@ -7,6 +7,7 @@ using UnityEngine;
 public class ObjectMover : MonoBehaviour
 {
     public GameObject hophey;
+    public GameController gameController;
     public ComboPoints comboPointsScript;    
     public bool isCut = false;
     public static bool isLoose = false;
@@ -192,6 +193,7 @@ public class ObjectMover : MonoBehaviour
                     Debug.LogError("You Suck!");
                     isPlaying = false;
                     GameController.gameController.canMove = false;
+                    gameController.restartMenu.SetActive(true);
                 }
                 else
                 {

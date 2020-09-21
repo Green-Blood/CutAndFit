@@ -41,6 +41,7 @@ public class GameController : MonoBehaviour
     public GameObject mainMenu;
     public GameObject subMenu;
     public GameObject gameplayMenu;
+    public GameObject restartMenu;
     public GameObject cutterShop;
     public GameObject skinShop;
     public GameObject cutterToggle;
@@ -73,7 +74,9 @@ public class GameController : MonoBehaviour
         holeSize = currentLvl.startrHoleSize;
         comboHole = currentLvl.startrHoleSize;
         Application.targetFrameRate = 60;
+        gameController.restartMenu.SetActive(false);
         levelVisuals = PlayerPrefs.GetInt("visual");
+        cutterVisuals = PlayerPrefs.GetInt("cuttervisual");
         themeVisuals = UnityEngine.Random.Range(0, themes.Length);
         //levelVisuals = 2;
         //cutterVisuals = 7;
@@ -264,9 +267,13 @@ public class GameController : MonoBehaviour
         }
     }
 
-    public void Equip()
+    public void Restart()
     {
-
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        ObjectMover.cutSize = 0f;
+        ObjectMover.cutSum = 0f;
+        ObjectMover.isPlaying = true;
+        ObjectMover.isLoose = false;
     }
 }
 
