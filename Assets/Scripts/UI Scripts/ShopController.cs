@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 using System.Linq;
 
 
@@ -13,6 +14,71 @@ public class ShopController : MonoBehaviour
     public int selectedSkin;
     public int selectedCutter;
     public GameController gameController;
+
+    private void Start()
+    {
+        Refresh();
+    }
+
+    void Refresh()
+    {
+        for (int i = 0; i < skins.Count; i++)
+        {
+            skins[i].skin.sprite = skins[i].skinSprite;
+            if (PlayerPrefs.GetInt("skin" + i) == 1)
+            {
+                skins[i].isUnlocked = true;
+                skins[i].lockObject.SetActive(false);
+            }
+            else
+            {
+                skins[i].priceText.text = skins[i].price + "";
+            }
+        }
+        for (int i = 0; i < cutters.Count; i++)
+        {
+            cutters[i].cutter.sprite = cutters[i].cutterSprite;
+            if (PlayerPrefs.GetInt("cutter" + i) == 1)
+            {
+                cutters[i].isUnlocked = true;
+                cutters[i].lockObject.SetActive(false);
+            }
+            else
+            {
+                cutters[i].priceText.text = cutters[i].price + "";
+            }
+        }
+        if (skins.Any(p => p.id == GameController.levelVisuals))
+            skins.First(s => s.id == GameController.levelVisuals).selectedFrame.enabled = true;
+        if (cutters.Any(p => p.id == GameController.cutterVisuals))
+            cutters.First(s => s.id == GameController.cutterVisuals).selectedFrame.enabled = true;
+    }
+
+    public void BuyCutter(int id)
+    {
+        if (cutters[id].price <= GameController.gem)
+        {
+            PlayerPrefs.SetInt("cutter" + id, 1);
+            cutters[id].isUnlocked = true;
+            SelectCutter(id);
+            GameController.gem -= cutters[id].price;
+            PlayerPrefs.SetInt("gem", GameController.gem);
+            Refresh();
+        }
+    }
+
+    public void BuySkin(int id)
+    {
+        if (skins[id].price <= GameController.gem)
+        {
+            PlayerPrefs.SetInt("skin" + id, 1);
+            skins[id].isUnlocked = true;
+            Select(id);
+            GameController.gem -= skins[id].price;
+            PlayerPrefs.SetInt("gem", GameController.gem);
+            Refresh();
+        }
+    }
 
     public void Select(int id)
     {
@@ -84,7 +150,7 @@ public class Skin
     public GameObject lockObject;
     public Sprite skinSprite;
     public Image skin, selectedFrame;
-    public Text priceText;
+    public TextMeshProUGUI priceText;
     public string name;
 }
 
@@ -96,5 +162,5 @@ public class Cutter
     public GameObject lockObject;
     public Sprite cutterSprite;
     public Image cutter, selectedFrame;
-    public Text priceText;
+    public TextMeshProUGUI priceText;
 }

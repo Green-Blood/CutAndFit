@@ -53,6 +53,7 @@ public class GameController : MonoBehaviour
     public GameObject skinToggle;
     public TextMeshProUGUI gemTextWin;
     public Text perfectText;
+    public Text cutCount;
     public Animation[] cutAnim;
     public Animation starAnim;
     public Animation perfectAnim;
@@ -151,6 +152,7 @@ public class GameController : MonoBehaviour
         prgImg.fillAmount = 0.0f;
         comboCount = 1;
         _isNextLvl = true;
+        cutCount.text = currentLvl.limitScene.ToString();
         if (isMainMenu)
         {
             if (currentLvlNumber == 0)
@@ -192,6 +194,7 @@ public class GameController : MonoBehaviour
                 Debug.LogError("You Suck!");
                 restartMenu.SetActive(true);
             }
+        cutCount.text = currentLvl.limitScene.ToString();
     }
 
     public bool isIncreace = false;
