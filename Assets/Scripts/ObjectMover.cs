@@ -127,7 +127,7 @@ public class ObjectMover : MonoBehaviour
                 cutTrigger = false;
 
                 _cuttedHophey = GameObject.FindGameObjectWithTag("cutted");
-
+                GameController.cutCounter++;
                 hophey.transform.DOKill();
                 if (hophey.transform.position.x > cutSum)
                 {
@@ -143,16 +143,20 @@ public class ObjectMover : MonoBehaviour
                         if (canPerfect)
                         {
                             GameController.gameController.comboCount++;
-                            StartCoroutine(comboPointsScript.UpdateComboPoints(GameController.gameController.comboCount, 0.5f));
+                            GameController.perfectCounter++;
+                            GameController.gem += 1;
+                            gameController.perfectText.text = gameController.perfectWords[UnityEngine.Random.Range(0, gameController.perfectWords.Length)];
+                            gameController.perfectAnim.Play();
+                            //StartCoroutine(comboPointsScript.UpdateComboPoints(GameController.gameController.comboCount, 0.5f));
                         }
                         else
                         {
                             GameController.gameController.comboCount = 1;
                         }
                     }
-                    else
-                        if (cutSize < GameController.gameController.holeSize)
+                    else if (cutSize < GameController.gameController.holeSize)
                     {
+                        GameController.gameController.ShowPg(cutSize);
                         GameController.gameController.isIncreace = true;
                         GameController.gameController.comboCount = 1;
                     }
@@ -196,7 +200,7 @@ public class ObjectMover : MonoBehaviour
             }
             if (isLoose)
             {
-                if (diff >= 0.03f)
+                if (diff >= 0.01f)
                 {
                     Debug.LogError("You Suck!");
                     isPlaying = false;

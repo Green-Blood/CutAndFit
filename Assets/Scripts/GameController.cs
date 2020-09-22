@@ -7,6 +7,7 @@ using UnityEngine.Networking;
 using UnityEngine.UI;
 using DG.Tweening;
 using UnityEngine.SceneManagement;
+using TMPro;
 
 public class GameController : MonoBehaviour
 {
@@ -19,6 +20,9 @@ public class GameController : MonoBehaviour
     public static CutterData currentCutter;
     public static ThemeData currentTheme;
     public static Material[] mats;
+    public static int cutCounter = 1;
+    public static int perfectCounter = 1;
+    public int stars;
     //[HideInInspector]
     public static int levelVisuals;
     //[HideInInspector]
@@ -42,13 +46,21 @@ public class GameController : MonoBehaviour
     public GameObject subMenu;
     public GameObject gameplayMenu;
     public GameObject restartMenu;
+    public GameObject WinMenu;
     public GameObject cutterShop;
     public GameObject skinShop;
     public GameObject cutterToggle;
     public GameObject skinToggle;
+    public TextMeshProUGUI gemTextWin;
+    public Text perfectText;
     public Animation[] cutAnim;
+    public Animation starAnim;
+    public Animation perfectAnim;
     public Button nextLvlBtn;
     private bool _isNextLvl = true;
+    public static int gem;
+    private float _pseudoGem;
+    public string[] perfectWords;
     [Header("For Level Designer")] public bool canMove = true;
     public float holeSize = 1.5f;
     public float comboHole = 0.0f;
@@ -75,6 +87,8 @@ public class GameController : MonoBehaviour
         comboHole = currentLvl.startrHoleSize;
         Application.targetFrameRate = 60;
 
+        gem = PlayerPrefs.GetInt("gem");
+        Debug.Log("Gems: " + gem);
         if (currentLvlNumber % (10) == 3)
         {
             ObjectMover.bossLevel = true;
@@ -149,6 +163,7 @@ public class GameController : MonoBehaviour
 
     private void Update()
     {
+        gemTextWin.text = Mathf.CeilToInt(_pseudoGem) + "";
         holeSlider.transform.position =
             new Vector3(Mathf.Lerp(holeSlider.transform.position.x, holeSize + 5f, Time.deltaTime * 5),
                 holeSlider.transform.position.y, holeSlider.transform.position.z);
@@ -171,7 +186,12 @@ public class GameController : MonoBehaviour
     {
         if (currentLvl.levelTyp == typ)
             if (--currentLvl.limitScene <= 0)
+            {
                 canMove = false;
+                //ObjectMover.isPlaying = false;
+                Debug.LogError("You Suck!");
+                restartMenu.SetActive(true);
+            }
     }
 
     public bool isIncreace = false;
@@ -216,7 +236,8 @@ public class GameController : MonoBehaviour
         currentLvl = levelsData.levels[currentLvlNumber++];
         PlayerPrefs.SetInt("currentLvl", currentLvlNumber);
         PlayerPrefs.Save();
-        nextLvlBtn.gameObject.SetActive(true);
+        WinMenu.SetActive(true);
+        Win();
         ObjectMover.cutSize = 0f;
         ObjectMover.cutSum = 0f;
         //progressBarScript.UpdateProgressBar();
@@ -290,11 +311,53 @@ public class GameController : MonoBehaviour
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
         isMainMenu = true;
+        ObjectMover.isPlaying = false;
         ObjectMover.cutSize = 0f;
         ObjectMover.cutSum = 0f;
         ObjectMover.isLoose = false;
         mainMenu.SetActive(true);
         restartMenu.SetActive(false);
+    }
+
+    public void Win()
+    {
+        if (cutCounter / perfectCounter < 1.5f)
+            stars = 3;
+        else if (cutCounter / perfectCounter >= 1.5f && cutCounter / perfectCounter < 2.7f)
+            stars = 2;
+        else
+            stars = 1;
+
+        currentLvl.stars = stars;
+
+        _pseudoGem = gem;
+        gemTextWin.text = gem + "";
+
+        if (stars == 1)
+            gem += UnityEngine.Random.Range(5, 10);
+        else if (stars == 2)
+            gem += UnityEngine.Random.Range(15, 20);
+        else if (stars == 3)
+            gem += UnityEngine.Random.Range(25, 30);
+        PlayerPrefs.SetInt("gem", gem);
+        PlayerPrefs.Save();
+        PlayStar();
+    }
+
+    public void PlayStar()
+    {
+        if (stars == 1)
+            starAnim.Play("star1");
+        else if (stars == 2)
+            starAnim.Play("star2");
+        else if (stars == 3)
+            starAnim.Play("star3");
+
+        DOTween.To(x => _pseudoGem = x, _pseudoGem, gem, 1f).SetDelay(2.5f);
+        gemTextWin.transform.DOScale(new Vector3(1.6f, 1.6f, 1.6f), 0.2f).SetDelay(2.5f).SetEase(Ease.InOutCubic).OnComplete(() =>
+        {
+            gemTextWin.transform.DOScale(new Vector3(1f, 1f, 1f), 0.4f).SetDelay(0.3f).SetEase(Ease.InOutCubic);
+        });
     }
 }
 
@@ -314,4 +377,5 @@ public class LevelSettings
     public float deltaSize = 0.1f;
     public float comboRange = 0.1f;
     public int cutN = 5;
+    public int stars = 0;
 }

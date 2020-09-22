@@ -32,14 +32,14 @@ namespace BzKovSoft.ObjectSlicer
                         Debug.Log("Destroyed by GC: " + go.name);
 
                     UnityEngine.Object.Destroy(go);
-                    if (ObjectMover.diff <= 0.15f)
-                    {
-                        Debug.Log("Perfect");
-                        ObjectMover.comboMeter++;
-                        Debug.Log("Combo Meter: " + ObjectMover.comboMeter);
-                    }
-                    else
-                        ObjectMover.comboMeter = 0;
+                    //if (ObjectMover.diff <= 0.15f)
+                    //{
+                    //    Debug.Log("Perfect");
+                    //    ObjectMover.comboMeter++;
+                    //    Debug.Log("Combo Meter: " + ObjectMover.comboMeter);
+                    //}
+                    //else
+                    //    ObjectMover.comboMeter = 0;
                 }
             }
         }

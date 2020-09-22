@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 2611281449038172183}
   - component: {fileID: 8460400328923798962}
   m_Layer: 0
-  m_Name: Levels_For_cutters
+  m_Name: Levels_for_cutters
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -48,59 +48,59 @@ MonoBehaviour:
     limitScene: 0
     startrHoleSize: 2.5
     deltaSize: 0.1
-    comboRange: 0.3
-    levelN: 3
-  - levelTyp: 2
-    limitScene: 0
-    startrHoleSize: 2.5
-    deltaSize: 0.1
-    comboRange: 0.3
-    levelN: 3
-  - levelTyp: 2
-    limitScene: 0
-    startrHoleSize: 2.5
-    deltaSize: 0.1
-    comboRange: 0.3
-    levelN: 4
+    comboRange: 0.2
+    cutN: 5
   - levelTyp: 2
     limitScene: 0
     startrHoleSize: 2.5
     deltaSize: 0.1
     comboRange: 0.2
-    levelN: 4
+    cutN: 5
+  - levelTyp: 2
+    limitScene: 0
+    startrHoleSize: 2.5
+    deltaSize: 0.1
+    comboRange: 0.2
+    cutN: 5
+  - levelTyp: 2
+    limitScene: 0
+    startrHoleSize: 2.5
+    deltaSize: 0.1
+    comboRange: 0.2
+    cutN: 5
   - levelTyp: 2
     limitScene: 0
     startrHoleSize: 2.3
     deltaSize: 0.1
-    comboRange: 0.3
-    levelN: 5
+    comboRange: 0.2
+    cutN: 5
   - levelTyp: 2
     limitScene: 0
     startrHoleSize: 2.2
     deltaSize: 0.1
-    comboRange: 0.25
-    levelN: 5
+    comboRange: 0.2
+    cutN: 5
   - levelTyp: 2
     limitScene: 0
     startrHoleSize: 2
     deltaSize: 0.05
-    comboRange: 0.25
-    levelN: 6
+    comboRange: 0.2
+    cutN: 5
   - levelTyp: 2
     limitScene: 0
     startrHoleSize: 2.7
     deltaSize: 0.1
     comboRange: 0.2
-    levelN: 6
+    cutN: 5
   - levelTyp: 2
     limitScene: 0
     startrHoleSize: 2.5
     deltaSize: 0.1
-    comboRange: 0.3
-    levelN: 7
+    comboRange: 0.2
+    cutN: 5
   - levelTyp: 2
     limitScene: 0
     startrHoleSize: 2
     deltaSize: 0.1
-    comboRange: 0.25
-    levelN: 8
+    comboRange: 0.2
+    cutN: 5
