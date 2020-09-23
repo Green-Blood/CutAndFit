@@ -20,23 +20,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5add63d4-0925-4cab-9ae8-682f9729afe1" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/Assets/3D/Materials/lightbox.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/3D/Materials/lightbox.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/BzKovSoft/ObjectSlicerSamples/SampleKnifeSlicer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/BzKovSoft/ObjectSlicerSamples/SampleKnifeSlicer.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/CutterData.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/CutterData.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameController.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameController.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/LevelData.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/LevelData.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/LevelsData.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/LevelsData.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ObjectMover.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ObjectMover.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/GamePlay.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/GamePlay.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SkinData.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SkinData.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ThemeData.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ThemeData.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.CutAndFit/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.CutAndFit/.idea/contentModel.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.CutAndFit/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.CutAndFit/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/3D/Materials/Ground.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/3D/Materials/Ground.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/DOTweenSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/DOTweenSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/GameController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GameController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectVersion.txt" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectVersion.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -56,8 +45,8 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/LevelsData.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/UI Scripts/ProgressBar.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/ObjectMover.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/GameController.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/UI Scripts/ComboPoints.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/GameController.cs" />
       </list>
     </option>
   </component>
@@ -71,6 +60,7 @@
     <property name="Discover.Launch.Via.Unity" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="nodejs_package_manager_path" value="npm" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
@@ -103,7 +93,9 @@
       <updated>1599738008489</updated>
       <workItem from="1599738008490" duration="728000" />
       <workItem from="1599739234640" duration="1035000" />
-      <workItem from="1599806376277" duration="14388000" />
+      <workItem from="1599806376277" duration="15659000" />
+      <workItem from="1600063805270" duration="472000" />
+      <workItem from="1600845454209" duration="2033000" />
     </task>
     <servers />
   </component>
@@ -122,6 +114,7 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />

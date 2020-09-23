@@ -167,6 +167,13 @@ public class GameController : MonoBehaviour
 
     private void Update()
     {
+        if (prgImg.fillAmount >= 0.99f && _isNextLvl)
+        {
+            
+            _isNextLvl = false;
+            NextLevel();
+        }
+        
         gemTextWin.text = Mathf.CeilToInt(_pseudoGem) + "";
         holeSlider.transform.position =
             new Vector3(Mathf.Lerp(holeSlider.transform.position.x, holeSize + 5f, Time.deltaTime * 5),
@@ -179,24 +186,31 @@ public class GameController : MonoBehaviour
         //if (ObjectMover.sliceCount >= 10)
         //    Debug.LogError("You Lose! (slice count exceeded)");
 
-        if (prgImg.fillAmount >= 0.99f && _isNextLvl)
-        {
-            _isNextLvl = false;
-            NextLevel();
-        }
+        
     }
 
     public void IncreaseMoveCount(LevelTyp typ)
     {
         if (currentLvl.levelTyp == typ)
-            if (--currentLvl.limitScene <= 0)
+            if (--currentLvl.limitScene <= 0 )
             {
-                canMove = false;
-                //ObjectMover.isPlaying = false;
-                Debug.LogError("You Suck!");
-                restartMenu.SetActive(true);
+                StartCoroutine(GameOverRoutine());
             }
         cutCount.text = currentLvl.limitScene.ToString();
+    }
+
+    private IEnumerator GameOverRoutine()
+    {
+        yield return new WaitForSeconds(0.25f);
+        canMove = false;
+        //ObjectMover.isPlaying = false;
+        Debug.LogError("You Suck!");
+        if (!WinMenu.activeInHierarchy)
+        {
+            restartMenu.SetActive(true);
+        }
+
+       
     }
 
     public bool isIncreace = false;
@@ -241,11 +255,11 @@ public class GameController : MonoBehaviour
         currentLvl = levelsData.levels[currentLvlNumber++];
         PlayerPrefs.SetInt("currentLvl", currentLvlNumber);
         PlayerPrefs.Save();
-        if (restartMenu.activeInHierarchy)
-        {
-            restartMenu.SetActive(false);
-            WinMenu.SetActive(true);
-        }
+        // if (restartMenu.activeInHierarchy)
+        // {
+        //     restartMenu.SetActive(false);
+        WinMenu.SetActive(true);
+        // }
         Win();
         ObjectMover.cutSize = 0f;
         ObjectMover.cutSum = 0f;
