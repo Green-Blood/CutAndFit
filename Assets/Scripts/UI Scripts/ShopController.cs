@@ -14,10 +14,13 @@ public class ShopController : MonoBehaviour
     public int selectedSkin;
     public int selectedCutter;
     public GameController gameController;
+    public TextMeshProUGUI gemTextMain;
+    public Text cutterCount;
 
     private void Start()
     {
         Refresh();
+        cutterCount.text = GameController.currentCutter.limit.ToString();
     }
 
     void Refresh()
@@ -62,6 +65,7 @@ public class ShopController : MonoBehaviour
             cutters[id].isUnlocked = true;
             SelectCutter(id);
             GameController.gem -= cutters[id].price;
+            gemTextMain.text = GameController.gem.ToString();
             PlayerPrefs.SetInt("gem", GameController.gem);
             Refresh();
         }
@@ -75,6 +79,7 @@ public class ShopController : MonoBehaviour
             skins[id].isUnlocked = true;
             Select(id);
             GameController.gem -= skins[id].price;
+            gemTextMain.text = GameController.gem.ToString();
             PlayerPrefs.SetInt("gem", GameController.gem);
             Refresh();
         }
@@ -127,6 +132,7 @@ public class ShopController : MonoBehaviour
         GameController.cutterVisuals = id;
         PlayerPrefs.SetInt("cuttervisual", id);
         GameController.currentCutter = gameController.cutters[GameController.cutterVisuals];
+        cutterCount.text = GameController.currentCutter.limit.ToString();
         Destroy(gameController.cutter);
         for (int i = 0; i < gameController.handlers.Length; i++)
         {

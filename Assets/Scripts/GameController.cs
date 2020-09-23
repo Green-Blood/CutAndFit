@@ -52,6 +52,7 @@ public class GameController : MonoBehaviour
     public GameObject cutterToggle;
     public GameObject skinToggle;
     public TextMeshProUGUI gemTextWin;
+    public TextMeshProUGUI gemTextMain;
     public Text perfectText;
     public Text cutCount;
     public Animation[] cutAnim;
@@ -89,6 +90,7 @@ public class GameController : MonoBehaviour
         Application.targetFrameRate = 60;
 
         gem = PlayerPrefs.GetInt("gem");
+        gemTextMain.text = gem.ToString();
         Debug.Log("Gems: " + gem);
         if (currentLvlNumber % (10) == 3)
         {
