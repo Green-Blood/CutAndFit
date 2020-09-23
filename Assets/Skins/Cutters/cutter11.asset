@@ -23,4 +23,4 @@ MonoBehaviour:
   - {fileID: 7777600175970421926, guid: b6a3dfba8ebb4054586652e940a00f21, type: 3}
   - {fileID: 7777600175970421926, guid: 75a67bc30289276418c1736839656257, type: 3}
   icon: {fileID: 21300000, guid: 13708b12825791d44b6cf60f2b0e3ca0, type: 3}
-  limit: 13
+  limit: 15

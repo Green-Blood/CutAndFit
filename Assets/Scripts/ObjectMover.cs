@@ -8,7 +8,8 @@ public class ObjectMover : MonoBehaviour
 {
     public GameObject hophey;
     public GameController gameController;
-    public ComboPoints comboPointsScript;    
+    public ComboPoints comboPointsScript;
+    public BoxCollider sliderColl;
     public bool isCut = false;
     public static bool bossLevel;
     public static bool isLoose = false;
@@ -164,6 +165,7 @@ public class ObjectMover : MonoBehaviour
 
                     if (cutSize <= GameController.gameController.holeSize)
                     {
+                        sliderColl.enabled = false;
                         //Debug.Log("Triggered");
                         if (cutSize > GameController.gameController.holeSize - GameController.gameController.holeSize / 10f && cutSize <= GameController.gameController.holeSize + GameController.gameController.holeSize / 10f)
                         {
@@ -186,8 +188,9 @@ public class ObjectMover : MonoBehaviour
                         //    StartCoroutine(ResizeHole(cutSize));
                         //}
                     }
-                    else if (cutSize > GameController.gameController.holeSize + 0.01f)
+                    else if (cutSize > GameController.gameController.holeSize)
                     {
+                        sliderColl.enabled = true;
                         isLoose = true;
                         hophey.transform.DOKill();
                     }
@@ -200,17 +203,21 @@ public class ObjectMover : MonoBehaviour
             }
             if (isLoose)
             {
-                if (diff >= 0.01f)
-                {
-                    Debug.LogError("You Suck!");
-                    isPlaying = false;
-                    GameController.gameController.canMove = false;
-                    gameController.restartMenu.SetActive(true);
-                }
-                else
-                {
-                    isLoose = false;
-                }
+                Debug.LogError("You Suck!");
+                isPlaying = false;
+                GameController.gameController.canMove = false;
+                gameController.restartMenu.SetActive(true);
+                //if (diff >= 0.01f)
+                //{
+                //    Debug.LogError("You Suck!");
+                //    isPlaying = false;
+                //    GameController.gameController.canMove = false;
+                //    gameController.restartMenu.SetActive(true);
+                //}
+                //else
+                //{
+                //    isLoose = false;
+                //}
             }
         }
     }

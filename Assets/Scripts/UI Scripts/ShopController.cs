@@ -19,6 +19,8 @@ public class ShopController : MonoBehaviour
 
     private void Start()
     {
+        PlayerPrefs.SetInt("skin" + 0, 1);
+        PlayerPrefs.SetInt("cutter" + 0, 1);
         Refresh();
         cutterCount.text = GameController.currentCutter.limit.ToString();
     }
