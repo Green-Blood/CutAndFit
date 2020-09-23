@@ -70,7 +70,7 @@ public class GameController : MonoBehaviour
     [Header("Level Settings")] public LevelsData levelsData;
     public LevelSettings currentLvl;
     [HideInInspector]
-    public static int currentLvlNumber = 0;
+    public static int currentLvlNumber = -1;
 
     [Header("UI")] public Image prgImg;
     [SerializeField] private ProgressBar progressBarScript;
@@ -157,10 +157,10 @@ public class GameController : MonoBehaviour
         cutCount.text = currentLvl.limitScene.ToString();
         if (isMainMenu)
         {
-            if (currentLvlNumber == 0)
+            if (currentLvlNumber == -1)
             {
-                PlayerPrefs.SetInt("currentLvl", 1);
-                currentLvlNumber = 1;
+                PlayerPrefs.SetInt("currentLvl", 0);
+                currentLvlNumber = 0;
             }
         }
     }
@@ -241,7 +241,11 @@ public class GameController : MonoBehaviour
         currentLvl = levelsData.levels[currentLvlNumber++];
         PlayerPrefs.SetInt("currentLvl", currentLvlNumber);
         PlayerPrefs.Save();
-        WinMenu.SetActive(true);
+        if (restartMenu.activeInHierarchy)
+        {
+            restartMenu.SetActive(false);
+            WinMenu.SetActive(true);
+        }
         Win();
         ObjectMover.cutSize = 0f;
         ObjectMover.cutSum = 0f;
